@@ -6,9 +6,19 @@ This repository offers alpine-based build and runtime environment for [scala-nat
 
 # Usage
 ## For build (and runtime)
+![](https://img.shields.io/docker/automated/amaya382/scala-native-builder.svg)
+![](https://img.shields.io/docker/build/amaya382/scala-native-builder.svg)
+![](https://img.shields.io/microbadger/layers/amaya382/scala-native-builder/latest.svg)
+![](https://img.shields.io/microbadger/image-size/amaya382/scala-native-builder/latest.svg)
+
 Use `amaya382/scala-native-builder`
 
 ## For runtime only
+![](https://img.shields.io/docker/automated/amaya382/scala-native.svg)
+![](https://img.shields.io/docker/build/amaya382/scala-native.svg)
+![](https://img.shields.io/microbadger/layers/amaya382/scala-native/latest.svg)
+![](https://img.shields.io/microbadger/image-size/amaya382/scala-native/latest.svg)
+
 Use `amaya382/scala-native`
 
 
