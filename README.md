@@ -17,11 +17,11 @@ Use `amaya382/scala-native`
 docker run -it amaya382/scala-native-builder sh
 ```
 
-In container,
+In the container,
 ```sh
-sbt new scala-native/scala-native.g8 example-project
-cd example-project
-sbt run # "Hello World"
+sbt new scala-native/scala-native.g8 # name=scala-native-seed-project
+cd scala-native-seed-project
+sbt run # "Hello, World!"
 ```
 
 And you should find an executable file in `target/scala-2.11`.
