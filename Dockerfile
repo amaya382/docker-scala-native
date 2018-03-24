@@ -1,4 +1,5 @@
 FROM openjdk:8-jdk-alpine AS builder
+LABEL maintainer "amaya <mail@sapphire.in.net>"
 
 RUN apk --no-cache add gc-dev clang musl-dev libc-dev build-base git
 RUN apk add libunwind-dev -U -X http://nl.alpinelinux.org/alpine/edge/main
@@ -12,13 +13,17 @@ ENV SBT_HOME="/usr/local/sbt"
 ENV PATH="${PATH}:${SBT_HOME}/bin"
 RUN mkdir -p ${SBT_HOME} && \
     apk add --no-cache bash wget bc && \
-    wget "https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/sbt-${SBT_VERSION}.tgz" -O - | tar xz -C ${SBT_HOME} --strip-components=1 && \
+    wget "https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/sbt-${SBT_VERSION}.tgz" -O - \
+      | tar xz -C ${SBT_HOME} --strip-components=1 && \
     sbt about
 
 
 
 FROM alpine:3.7
+LABEL maintainer "amaya <mail@sapphire.in.net>"
+
 RUN apk add --no-cache libatomic_ops
+
 COPY --from=builder \
    /usr/lib/libunwind.so.8 \
    /usr/lib/libunwind-x86_64.so.8 \
