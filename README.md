@@ -36,3 +36,7 @@ sbt run # "Hello, World!"
 
 And you should find an executable file in `target/scala-2.11`.
 
+
+# Acknowledgement
+* [rwhaling/dinosaur](https://github.com/rwhaling/dinosaur)
+
